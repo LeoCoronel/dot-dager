@@ -1,0 +1,156 @@
+---
+import Cat from "../../assets/img/cat.svg";
+import Code from "../../assets/img/code.svg";
+import Guitar from "../../assets/img/guitar.svg";
+import Pickle from "../../assets/img/pickle.svg";
+import DagerCat from "../../assets/img/dager_cat.png";
+import DagerCode from "../../assets/img/dager_code.png";
+import DagerGuitar from "../../assets/img/dager_guitar.png";
+
+import * as m from "../../paraglide/messages";
+
+import SoundButton from "../../components/SoundButton";
+---
+
+<div
+  id="about"
+  class="sm:w-screen md:max-w-[85rem] px-4 py-10 sm:px-2 lg:px-8 lg:py-14 mx-auto"
+>
+  <div class="relative mt-10 p-6 md:p-16">
+    <div
+      class="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center"
+    >
+      <div class="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
+        <h2
+          class="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-neutral-200"
+        >
+          {m.aboutTitle()}
+        </h2>
+
+        <nav
+          class="grid gap-4 mt-5 md:mt-10"
+          aria-label="Tabs"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <button
+            type="button"
+            class="hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 focus:outline-none focus:bg-gray-200 p-4 md:p-5 rounded-xl dark:hs-tab-active:bg-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 active"
+            id="tabs-with-card-item-1"
+            aria-selected="true"
+            data-hs-tab="#tabs-with-card-1"
+            aria-controls="tabs-with-card-1"
+            role="tab"
+          >
+            <span class="flex gap-x-6">
+              <img src={Code.src} alt="code" class="w-10 h-10" />
+              <span class="grow">
+                <span
+                  class="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200"
+                  >{m.programming()}</span
+                >
+                <span
+                  class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-neutral-200"
+                  >{m.programmingDesc}</span
+                >
+              </span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start hover:bg-gray-200 focus:outline-none focus:bg-gray-200 p-4 md:p-5 rounded-xl dark:hs-tab-active:bg-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+            id="tabs-with-card-item-2"
+            aria-selected="false"
+            data-hs-tab="#tabs-with-card-2"
+            aria-controls="tabs-with-card-2"
+            role="tab"
+          >
+            <span class="flex gap-x-6">
+              <img src={Cat.src} alt="code" class="w-10 h-10" />
+              <span class="grow">
+                <span
+                  class="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200"
+                  >{m.cats()}</span
+                >
+                <span
+                  class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-neutral-200"
+                  >{m.catsDesc()}</span
+                >
+              </span>
+            </span>
+          </button>
+
+          <SoundButton />
+        </nav>
+      </div>
+
+      <div class="lg:col-span-6">
+        <div class="relative">
+          <div>
+            <div
+              id="tabs-with-card-1"
+              role="tabpanel"
+              aria-labelledby="tabs-with-card-item-1"
+            >
+              <img
+                class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/20"
+                src={DagerCode.src}
+                alt="Features Image"
+              />
+            </div>
+
+            <div
+              id="tabs-with-card-2"
+              class="hidden"
+              role="tabpanel"
+              aria-labelledby="tabs-with-card-item-2"
+            >
+              <img
+                class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/20 object-cover"
+                src={DagerCat.src}
+                alt="Features Image"
+              />
+            </div>
+
+            <div
+              id="tabs-with-card-3"
+              class="hidden"
+              role="tabpanel"
+              aria-labelledby="tabs-with-card-item-3"
+            >
+              <img
+                class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/20"
+                src={DagerGuitar.src}
+                alt="Features Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute inset-0 grid grid-cols-12 size-full">
+      <div
+        class="col-span-full lg:col-span-7 lg:col-start-6 bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full dark:bg-neutral-800"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  // Esta función se ejecutará cuando el botón sea clickeado
+  const playSound = () => {
+    const audio = new Audio("/sounds/sound.mp3"); // Asegúrate de tener el sonido en la carpeta public/sounds
+    audio.play();
+  };
+
+  // Esperar a que el documento cargue para asignar el evento
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("tabs-with-card-item-3");
+    if (button) {
+      button.addEventListener("click", playSound);
+    }
+  });
+</script>

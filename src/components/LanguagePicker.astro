@@ -1,0 +1,13 @@
+---
+import * as m from "../paraglide/messages";
+import { languageTag } from "../paraglide/runtime";
+import DropDown from "./DropDown";
+
+// Función para generar las URLs dinámicas según el idioma
+const makeUrlForLanguage = (lang: string) =>
+  `/${lang}${Astro.url.pathname.replace(`/${languageTag()}`, "")}`;
+
+const { lang } = Astro.params;
+---
+
+<DropDown lang={lang} client:only />

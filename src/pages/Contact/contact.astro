@@ -1,0 +1,90 @@
+---
+import Youtube from "../../assets/img/youtube.svg";
+import Twitch from "../../assets/img/twitch.svg";
+import Instagram from "../../assets/img/instagram.svg";
+
+import * as m from "../../paraglide/messages";
+---
+
+<!-- Card Section -->
+<div id="contact" class="max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Grid -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+    <!-- Card -->
+    <a
+      class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800"
+      href="https://www.youtube.com/@DotDager"
+      target="_blank"
+    >
+      <div class="p-4 md:p-5 my-auto">
+        <div class="flex gap-x-5">
+          <img src={Youtube.src} alt="YouTube" class="w-10 h-10 my-auto" />
+
+          <div class="grow">
+            <h3
+              class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200"
+            >
+              {m.youtube()}
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-neutral-500">
+              {m.youtubeDesc()}
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!-- End Card -->
+
+    <!-- Card -->
+    <a
+      class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800"
+      href="https://www.twitch.tv/dagerxiv"
+      target="_blank"
+    >
+      <div class="p-4 md:p-5 my-auto">
+        <div class="flex gap-x-5">
+          <img src={Twitch.src} alt="YouTube" class="w-10 h-10 my-auto" />
+
+          <div class="grow">
+            <h3
+              class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200"
+            >
+              {m.twitch}
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-neutral-500">
+              {m.twitchDesc}
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!-- End Card -->
+
+    <!-- Card -->
+    <a
+      class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md focus:outline-none focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800"
+      href="https://www.instagram.com/dager.32/"
+      target="_blank"
+    >
+      <div class="p-4 md:p-5 my-auto">
+        <div class="flex gap-x-5">
+          <img src={Instagram.src} alt="Instagram" class="w-10 h-10 my-auto" />
+
+          <div class="grow">
+            <h3
+              class="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200"
+            >
+              {m.ig}
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-neutral-500">
+              {m.igDesc()}
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!-- End Card -->
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Card Section -->

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "homePageTitle": "DOT DAGER",
+  "homePageContent": "I'm a content creator who loves programming, cats, guitars, pickles and philosophy.",
+  "aboutTitle": "Any doubt? i expect it's not your podonga",
+  "programming": "Programming",
+  "programmingDesc": "Debugging is like being a detective in a crime movie where I wrote the crime.",
+  "cats": "Cats",
+  "catsDesc": "My cat tried to help me code once... now my variables are named 'Meow.'",
+  "guitar": "Guitar",
+  "guitarDesc": "Am",
+  "youtube": "YouTube",
+  "youtubeDesc": "I'm not sexy enough to open a PornHub channel.",
+  "twitch": "Twitch",
+  "twitchDesc": "Like an ibai for sedentary people.",
+  "ig": "Instagram",
+  "igDesc": "I’m just here for the memes and cat pics."
+}
