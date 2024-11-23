@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import typography from "@tailwindcss/typography";
 import forms from "@tailwindcss/forms";
+import animations from "@midudev/tailwind-animations";
 export default {
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
@@ -20,5 +21,11 @@ export default {
       },
     },
   },
-  plugins: ["preline/plugin", typography, forms, "preline/dropdown"],
+  plugins: [
+    "preline/plugin",
+    typography,
+    forms,
+    "preline/dropdown",
+    animations,
+  ],
 };
